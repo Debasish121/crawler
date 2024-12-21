@@ -96,7 +96,7 @@ $ pip install -r requirements.txt
 Execute the script to scrape job postings and store them in MongoDB:
 
 ```bash
-$ python scraper.py
+$ python job_scraper.py
 ```
 
 ---
