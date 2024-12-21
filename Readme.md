@@ -1,6 +1,6 @@
 # Shopify Job Scraper
 
-This project is a Python-based job scraper that collects job listings related to Shopify from multiple sources like LinkedIn, Indeed, Glassdoor, ZipRecruiter, and Google Jobs. The scraped data is stored in a MongoDB database for further analysis and usage.
+This project is a Python-based job scraper that collects job listings related to Shopify from multiple sources like LinkedIn, Indeed, Glassdoor, ZipRecruiter, Google Jobs etc. The scraped data is stored in a MongoDB database for further analysis and usage.
 
 
 ## Features
