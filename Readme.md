@@ -111,7 +111,7 @@ The scraped data is stored in the `shopify_jobs` database within the `job_List` 
 
 ### MongoDB Dashboard Example
 
-Include a screenshot of your MongoDB dashboard showcasing stored job data for better clarity.
+I have included screenshots of the MongoDB dashboard showcasing stored job data for better clarity.
 ![s-2](https://github.com/user-attachments/assets/5734cb37-0722-4216-9475-97bb42998176)
 ![s-1](https://github.com/user-attachments/assets/b44a9412-54be-4d78-abda-e50d9e8d5e0f)
 
