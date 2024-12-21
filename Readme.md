@@ -2,7 +2,6 @@
 
 This project is a Python-based job scraper that collects job listings related to Shopify from multiple sources like LinkedIn, Indeed, Glassdoor, ZipRecruiter, and Google Jobs. The scraped data is stored in a MongoDB database for further analysis and usage.
 
----
 
 ## Features
 
@@ -13,7 +12,13 @@ This project is a Python-based job scraper that collects job listings related to
 - Headers included for better scraping reliability.
 - Effective logging and error handling.
 
----
+## How It Works
+
+1. The script uses the `python-jobspy` library to scrape job data from the specified job boards.
+2. Headers are included to simulate a browser request for reliable scraping.
+3. Job data is cleaned and transformed before being stored in MongoDB.
+4. The script ensures no duplicate entries are stored by checking existing records.
+
 
 ## Prerequisites
 
@@ -38,7 +43,7 @@ $ cd shopify-job-scraper
 
 ```bash
 $ python -m venv venv
-$ source venv/bin/activate   # On Windows: venv\Scripts\activate
+$ venv\Scripts\activate  # On Windows: 
 ```
 
 ### 3. Install Dependencies
@@ -66,7 +71,6 @@ Execute the script to scrape job postings and store them in MongoDB:
 $ python scraper.py
 ```
 
----
 
 ## Configuration
 
@@ -76,9 +80,9 @@ The scraper is highly configurable through the `CONFIG` dictionary in the script
 CONFIG = {
     "search_term": "Shopify",
     "location": "India",
-    "results_wanted": 50,
+    "results_wanted": 50, # number of job results to retrieve for each site specified in 'site_name'
     "hours_old": 72,  # Fetch jobs posted within the last 72 hours
-    "site_name": ["linkedin", "indeed", "zip_recruiter", "glassdoor", "google"],
+    "site_name": ["linkedin", "indeed", "zip_recruiter", "glassdoor", "google"], # Multiple sources
     "description_format": "markdown",
     "linkedin_fetch_description": True,
 }
@@ -94,7 +98,7 @@ The scraped data is stored in the `shopify_jobs` database within the `job_List` 
 
 ```json
 {
-  "title": "Software Developer",
+  "title": "Shopify Developer",
   "company": "Example Corp",
   "location": "Bangalore, India",
   "description": "Job description in markdown format",
@@ -109,7 +113,7 @@ The scraped data is stored in the `shopify_jobs` database within the `job_List` 
 
 Include a screenshot of your MongoDB dashboard showcasing stored job data for better clarity.
 
----
+
 
 ## Logging
 
@@ -120,7 +124,7 @@ All activity is logged in the `crawler.log` file and displayed in the console. L
 - Jobs successfully stored or skipped due to duplication.
 - Warnings and errors.
 
----
+
 
 ## Error Handling
 
@@ -128,35 +132,7 @@ All activity is logged in the `crawler.log` file and displayed in the console. L
 - **Invalid Data**: Handles missing or malformed data gracefully and logs warnings.
 - **Duplicate Jobs**: Skips storing duplicate jobs by checking the database.
 
----
 
-## How It Works
-
-1. The script uses the `python-jobspy` library to scrape job data from the specified job boards.
-2. Headers are included to simulate a browser request for reliable scraping.
-3. Job data is cleaned and transformed before being stored in MongoDB.
-4. The script ensures no duplicate entries are stored by checking existing records.
-
----
-
-## Requirements
-
-Below are the dependencies listed in `requirements.txt`:
-
-```
-python-jobspy==1.0.0  # Replace with the actual version
-pymongo==4.5.0       # Replace with the actual version
-logging==0.5.1.2     # Built-in Python module
-python-dotenv==1.0.0 # Optional if environment variables are used
-```
-
-Install them using:
-
-```bash
-$ pip install -r requirements.txt
-```
-
----
 
 ## Future Improvements
 
@@ -165,18 +141,5 @@ $ pip install -r requirements.txt
 - Implement a web-based dashboard to visualize job data.
 
 ---
-
-## Evaluation Criteria
-
-This project satisfies the following evaluation criteria:
-
-1. **Successful data collection**: Captures job listings from multiple job boards.
-2. **Clean, readable code**: Follows Python best practices and uses logging.
-3. **Effective error handling**: Gracefully handles errors and logs warnings.
-4. **Completeness of job information**: Captures all essential job details, ensuring a robust dataset.
-
----
-
-## Author
 
 Debasish Vishal
