@@ -150,12 +150,5 @@ All activity is logged in the `crawler.log` file and displayed in the console. L
 
 ---
 
-## Future Improvements
-
-- Add more job boards for wider coverage.
-- Integrate email notifications for new job postings.
-- Implement a web-based dashboard to visualize job data.
-
----
-
+## Author
 Debasish Vishal
