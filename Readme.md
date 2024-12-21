@@ -16,8 +16,6 @@ This project is a Python-based job scraper that collects job listings related to
 - Effective logging and error handling.
 
 
----
-
 
 ## How It Works
 
@@ -26,6 +24,24 @@ This project is a Python-based job scraper that collects job listings related to
 3. Job data is cleaned and transformed before being stored in MongoDB.
 4. The script ensures no duplicate entries are stored by checking existing records.
 
+
+## Logging
+
+All activity is logged in the `crawler.log` file and displayed in the console. Logs include:
+
+- Scraping start and completion times.
+- Number of jobs scraped.
+- Jobs successfully stored or skipped due to duplication.
+- Warnings and errors.
+
+
+## Error Handling
+
+- **Network Errors**: Logs any network-related issues during scraping.
+- **Invalid Data**: Handles missing or malformed data gracefully and logs warnings.
+- **Duplicate Jobs**: Skips storing duplicate jobs by checking the database.
+
+---
 
 ## Prerequisites
 
@@ -128,25 +144,6 @@ The scraped data is stored in the `shopify_jobs` database within the `job_List` 
 I have included screenshots of the MongoDB dashboard showcasing stored job data for better clarity.
 ![s-2](https://github.com/user-attachments/assets/5734cb37-0722-4216-9475-97bb42998176)
 ![s-1](https://github.com/user-attachments/assets/b44a9412-54be-4d78-abda-e50d9e8d5e0f)
-
----
-
-## Logging
-
-All activity is logged in the `crawler.log` file and displayed in the console. Logs include:
-
-- Scraping start and completion times.
-- Number of jobs scraped.
-- Jobs successfully stored or skipped due to duplication.
-- Warnings and errors.
-
----
-
-## Error Handling
-
-- **Network Errors**: Logs any network-related issues during scraping.
-- **Invalid Data**: Handles missing or malformed data gracefully and logs warnings.
-- **Duplicate Jobs**: Skips storing duplicate jobs by checking the database.
 
 ---
 
