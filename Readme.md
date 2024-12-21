@@ -3,6 +3,9 @@
 This project is a Python-based job scraper that collects job listings related to Shopify from multiple sources like LinkedIn, Indeed, Glassdoor, ZipRecruiter, Google Jobs etc. The scraped data is stored in a MongoDB database for further analysis and usage.
 
 
+---
+
+
 ## Features
 
 - Scrapes job postings from multiple job boards.
@@ -11,6 +14,10 @@ This project is a Python-based job scraper that collects job listings related to
 - Uses MongoDB for storing job data.
 - Headers included for better scraping reliability.
 - Effective logging and error handling.
+
+
+---
+
 
 ## How It Works
 
@@ -28,7 +35,9 @@ Before setting up the project, ensure the following are installed:
 - **MongoDB** (running locally or accessible remotely)
 - **pip** (Python package installer)
 
+
 ---
+
 
 ## Setup Instructions
 
@@ -43,7 +52,7 @@ $ cd shopify-job-scraper
 
 ```bash
 $ python -m venv venv
-$ venv\Scripts\activate  # On Windows: 
+$ venv\Scripts\activate  # On Windows
 ```
 
 ### 3. Install Dependencies
@@ -53,6 +62,9 @@ Install all required Python packages:
 ```bash
 $ pip install -r requirements.txt
 ```
+
+---
+
 
 ### 4. Configure MongoDB
 
@@ -70,6 +82,8 @@ Execute the script to scrape job postings and store them in MongoDB:
 ```bash
 $ python scraper.py
 ```
+
+---
 
 
 ## Configuration
@@ -115,6 +129,7 @@ I have included screenshots of the MongoDB dashboard showcasing stored job data 
 ![s-2](https://github.com/user-attachments/assets/5734cb37-0722-4216-9475-97bb42998176)
 ![s-1](https://github.com/user-attachments/assets/b44a9412-54be-4d78-abda-e50d9e8d5e0f)
 
+---
 
 ## Logging
 
@@ -125,7 +140,7 @@ All activity is logged in the `crawler.log` file and displayed in the console. L
 - Jobs successfully stored or skipped due to duplication.
 - Warnings and errors.
 
-
+---
 
 ## Error Handling
 
@@ -133,7 +148,7 @@ All activity is logged in the `crawler.log` file and displayed in the console. L
 - **Invalid Data**: Handles missing or malformed data gracefully and logs warnings.
 - **Duplicate Jobs**: Skips storing duplicate jobs by checking the database.
 
-
+---
 
 ## Future Improvements
 
